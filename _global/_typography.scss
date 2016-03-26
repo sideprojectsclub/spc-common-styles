@@ -72,7 +72,7 @@ p, li, th, td {
 
 p, li, td {
     color: $body-color;
-    font-weight: $light;
+    font-weight: $normal;
 }
 
 p, ul, ol {
@@ -85,10 +85,6 @@ p {
 
 li {
     margin: ($text-space-unit / 3) 0;
-}
-
-strong {
-    font-weight: $semibold;
 }
 
 small {
@@ -140,7 +136,15 @@ a {
         font-size: 2rem;
     }
     
+    p, li, td {
+        font-weight: $light;
+    }
+    
     p {
         line-height: 1.85;
+    }
+    
+    strong {
+        font-weight: $semibold;
     }
 }
