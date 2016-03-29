@@ -6,6 +6,10 @@ form {
     @extend %clearfix;
     max-width: 600px;
     margin: 0 auto;
+    
+    p {
+        margin: 0.5rem 0;
+    }
 }
 
 label {
