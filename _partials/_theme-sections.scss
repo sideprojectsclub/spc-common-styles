@@ -77,9 +77,17 @@
     }
 }
 
-.two-column-section.align-top {
-    .column {
-        @include align-items(flex-start);
+.two-column-section {
+    &.align-top {
+        .column {
+            @include align-items(flex-start);
+        }
+    }
+    
+    &.align-center {
+        .column {
+            @include align-items(center);
+        }
     }
 }
 

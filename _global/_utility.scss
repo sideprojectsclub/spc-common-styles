@@ -22,3 +22,19 @@
 .puzzle-button {
     @extend %puzzle-button;
 }
+
+.blue-background .puzzle-button {
+    background-color: $orange;
+    
+    &:hover {
+        background-color: #fff;
+        color: $blue;
+    }
+}
+
+.orange-background .puzzle-button {
+    &:hover {
+        background-color: #fff;
+        color: $blue;
+    }
+}
