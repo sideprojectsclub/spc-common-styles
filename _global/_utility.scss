@@ -25,6 +25,7 @@
 
 .blue-background .puzzle-button {
     background-color: $orange;
+    color: #fff;
     
     &:hover {
         background-color: #fff;
@@ -33,6 +34,8 @@
 }
 
 .orange-background .puzzle-button {
+    color: #fff;
+    
     &:hover {
         background-color: #fff;
         color: $blue;
