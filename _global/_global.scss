@@ -31,7 +31,7 @@ main {
             padding-top: $nav-height + $space-unit;
             
             &:only-child {
-                padding-bottom: $space-unit * 2 + 10px;
+                padding-bottom: $space-unit * 2 + 1rem;
             }
         }
         

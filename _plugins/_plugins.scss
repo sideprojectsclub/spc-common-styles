@@ -6,6 +6,20 @@
  * All in One Event Calendar
  */
 
+.timely {
+    color: $body-color;
+    font-family: $open-sans;
+    font-size: 1.6rem;
+    
+    a {
+        color: $blue;
+        
+        &:hover, &:focus {
+            color: $orange;
+        }
+    }
+}
+
 /* Agenda view */
 .ai1ec-agenda-widget-view, .ai1ec-agenda-view {
     .ai1ec-date {
@@ -18,6 +32,10 @@
         }
     }
     
+    .ai1ec-month {
+        background-color: $blue;
+    }
+    
     .ai1ec-year {
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -27,7 +45,20 @@
         @include box-shadow(none);
         border: 0;
         background: $light-gray;
+        color: $body-color;
         text-shadow: none;
+    }
+}
+
+.ai1ec-agenda-widget-view {
+    .ai1ec-event {
+        > a {
+            color: $blue;
+            
+            &:hover {
+                color: $orange;
+            }
+        }
     }
 }
 
@@ -56,15 +87,20 @@
             box-shadow: none;
         }
         
+        &:hover {
+            .ai1ec-event-title {
+                color: $orange;
+            }
+        }
+        
         .ai1ec-event-title {
-            font-size: 24px;
+            color: $blue;
             font-size: 2.4rem;
             font-weight: $semibold;
             @include transition(all 0.4s ease);
         }
         
         .ai1ec-event-time {
-            font-size: 16px;
             font-size: 1.6rem;
             font-weight: $normal;
         }
@@ -101,12 +137,73 @@
 }
 
 /* Monthly view */
-
 .ai1ec-month-view .ai1ec-date {
     text-shadow: none;
 }
 
+/* Week view */
+.ai1ec-week-view .ai1ec-week a.ai1ec-event-container,
+.ai1ec-oneday-view .ai1ec-oneday a.ai1ec-event-container {
+    border: 0;
+    background-color: $blue;
+    background-image: none;
+    color: #fff;
+}
+
+/* Popup */
+.ai1ec-popup-title {
+    font-size: 1.6rem;
+}
+
+.ai1ec-popover.ai1ec-popup .ai1ec-event-time,
+.ai1ec-popup-excerpt{
+    font-size: 1.3rem;
+}
+
+/* Buttons */
+.timely {
+    .ai1ec-btn-default {
+        &, &.ai1ec-disabled, &.ai1ec-disabled:hover {
+            border-color: transparent;
+            background-color: $blue;
+            color: #fff;
+        }
+    }
+}
+
+.ai1ec-btn-group > .ai1ec-btn,
+.ai1ec-btn-group > .ai1ec-dropdown-menu,
+.ai1ec-btn-group > .ai1ec-popover,
+.ai1ec-single-event .ai1ec-actions .ai1ec-btn {
+    font-size: 1.4rem;
+}
+
+.timely .ai1ec-btn-default:hover,
+.timely .ai1ec-btn-default:focus,
+.timely .ai1ec-btn-default:active,
+.timely .ai1ec-btn-default.ai1ec-active,
+.ai1ec-open .ai1ec-dropdown-toggle.timely .ai1ec-btn-default {
+    border-color: transparent;
+    background-color: $orange;
+    color: #fff;
+}
+
+/* Single Post */
+
+.ai1ec-single-event {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.ai1ec-field-label {
+    font-size: 1.4rem;
+}
+
 /* Miscellaneous */
+
+.ai1ec-calendar-toolbar {
+    border: 0;
+}
 
 .ai1ec-dropdown-menu, .ai1ec-btn-group.ai1ec-open .ai1ec-dropdown-toggle, .ai1ec-popover {
     -webkit-box-shadow: none;
@@ -117,7 +214,19 @@
     background-color: transparent;
 }
 
-.ai1ec-month-view .ai1ec-allday .ai1ec-event, .ai1ec-month-view .ai1ec-multiday .ai1ec-event, .ai1ec-week-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event, .ai1ec-week-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event, .ai1ec-oneday-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event, .ai1ec-oneday-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event {
+.ai1ec-calendar-title,
+.ai1ec-calendar-title-short {
+    font-size: 1.6rem;
+}
+
+.ai1ec-month-view .ai1ec-allday .ai1ec-event,
+.ai1ec-month-view .ai1ec-multiday .ai1ec-event,
+.ai1ec-week-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event,
+.ai1ec-week-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event,
+.ai1ec-oneday-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event,
+.ai1ec-oneday-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event,
+.ai1ec-week-view .ai1ec-week a.ai1ec-event-container,
+.ai1ec-oneday-view .ai1ec-oneday a.ai1ec-event-container {
     text-shadow: none;
 }
 

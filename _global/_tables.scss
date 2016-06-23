@@ -15,10 +15,10 @@ tr:nth-child(even) {
 }
 
 th {
-    font-weight: $bold;
+    font-weight: $semibold;
 }
 
 td, th {
     vertical-align: top;
-    padding: 5px;
+    padding: 0.5rem;
 }

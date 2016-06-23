@@ -3,11 +3,11 @@
 /*---------------------------*/
 
 .puzzle-accordions-content {
-    padding: 15px 0;
+    padding: ($space-unit / 2) 0;
     
     > .column {
-        margin-top: 10px;
-        padding: 0 15px;
+        margin-top: 1rem;
+        padding: 0 ($space-unit / 2);
         
         &:first-child {
             margin-top: 0;
@@ -65,7 +65,7 @@
     
     .puzzle-accordion-content {
         display: none;
-        padding: 10px 0;
+        padding: 1rem 0;
     }
 }
 
