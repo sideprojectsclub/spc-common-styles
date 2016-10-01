@@ -71,7 +71,7 @@ input {
 }
 
 button, input[type='button'], input[type='submit'] {
-    @extend %puzzle-button;
+    @extend %button;
     width: auto;
     height: auto;
     text-transform: uppercase;

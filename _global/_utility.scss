@@ -2,7 +2,7 @@
 /* Utility Classes */
 /*-----------------*/
 
-%puzzle-button {
+%button {
     @include transition (all 0.4s ease);
     @extend %default-border-radius;
     display: inline-block;
@@ -21,11 +21,11 @@
     }
 }
 
-.puzzle-button {
-    @extend %puzzle-button;
+.spc-button {
+    @extend %button;
 }
 
-.blue-background .puzzle-button {
+.blue-background .spc-button {
     background-color: $orange;
     color: #fff;
     
@@ -35,7 +35,7 @@
     }
 }
 
-.orange-background .puzzle-button {
+.orange-background .spc-button {
     color: #fff;
     
     &:hover {
