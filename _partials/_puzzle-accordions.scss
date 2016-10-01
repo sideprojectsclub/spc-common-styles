@@ -16,8 +16,12 @@
     
     .column-inner {
         @extend %default-border-radius;
-        background-color: #fff;
+        background-color: rgba(#fff, 0.8);
         @include transition(all 0.4s ease);
+        
+        &:hover, &.active-accordion {
+            background-color: #fff;
+        }
         
         &.active-accordion {
             .puzzle-accordion-headline {
@@ -46,7 +50,7 @@
             float: left;
             width: 40px;
             padding-left: 10px;
-            color: $medium-gray;
+            color: $orange;
             font-size: 36px;
             
             &:before {
@@ -56,10 +60,6 @@
         
         &:hover {
             color: $orange;
-            
-            .fa {
-                color: $body-color;
-            }
         }
     }
     
@@ -70,5 +70,9 @@
 }
 
 .white-background .puzzle-accordions-content .column-inner {
-    background-color: $light-gray;
+    background-color: $light-blue;
+    
+    &:hover, &.active-accordion {
+        background-color: rgba($light-blue, 0.6);
+    }
 }

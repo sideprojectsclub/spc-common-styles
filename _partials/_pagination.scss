@@ -16,6 +16,7 @@
     @include flex(0 1 auto);
     margin: 0.5rem;
     padding: 0.5rem 0.7rem;
+    @extend %default-border-radius;
     color: $body-color;
     text-decoration: none;
     
