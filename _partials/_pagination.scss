@@ -3,45 +3,53 @@
 /*------------*/
 
 #pagination {
-    @extend %clearfix;
-    margin: 0;
-    padding: $space-unit 0;
-    border-top: solid 1px $medium-gray;
-    list-style: none;
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include justify-content(center);
     
-    li {
-        display: inline-block;
-        font-size: 1.8rem;
+    @include breakpoint($size-md) {
+        @include justify-content(flex-start);
+    }
+}
+
+.page-numbers {
+    @include flex(0 1 auto);
+    margin: 0.5rem;
+    padding: 0.5rem 0.7rem;
+    color: $body-color;
+    text-decoration: none;
+    
+    &.current {
+        background-color: $orange;
+        color: #fff;
     }
     
-    a {
-        @extend %default-border-radius;
-        display: inline-block;
-        padding: 1.5rem 2.5rem;
-        background-color: #fff;
-        border: solid 2px $medium-gray;
-        text-decoration: none;
-        
-        &:hover {
-            background-color: $medium-gray;
-            border-color: transparent;
-            color: #fff;
-        }
+    &.disabled {
+        background-color: #f7f7f7;
+        color: rgba($body-color, 0.15);
     }
     
-    #newer-pages {
-        float: left;
-        
-        .fa {
-            margin-right: 0.5rem;
-        }
+    &.dots {
+        border-color: transparent;
     }
     
-    #older-pages {
-        float: right;
-        
-        .fa {
-            margin-left: 0.5rem;
-        }
+    @include breakpoint($size-md) {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+a.page-numbers {
+    border-color: transparent;
+    background-color: $light-blue;
+    
+    &:hover, &:focus {
+        background-color: $blue;
+        color: #fff;
+    }
+    
+    &:active {
+        background-color: darken($blue, 10%);
+        color: #fff;
     }
 }
