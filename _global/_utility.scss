@@ -3,7 +3,7 @@
 /*-----------------*/
 
 %button {
-    @include transition (all 0.4s ease);
+    @extend %default-transition;
     @extend %default-border-radius;
     display: inline-block;
     padding: 1rem 2rem;
@@ -42,4 +42,20 @@
         background-color: #fff;
         color: $blue;
     }
+}
+
+%clearfix {
+    &:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+}
+
+%default-border-radius {
+    border-radius: 3px;
+}
+
+%default-transition {
+    transition: all 0.4s ease;
 }

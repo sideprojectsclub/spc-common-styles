@@ -1,0 +1,78 @@
+/*---------------------------*/
+/* Puzzle Accordions Section */
+/*---------------------------*/
+
+.pz-accordions-content {
+    padding: ($space-unit / 2) 0;
+    
+    > .col {
+        margin-top: 1rem;
+        padding: 0 ($space-unit / 2);
+        
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.pz-accordion {
+    @extend %default-border-radius;
+    background-color: rgba(#fff, 0.8);
+    @extend %default-transition;
+    
+    &:hover, &.active-accordion {
+        background-color: #fff;
+    }
+    
+    &.pz-active-accordion {
+        .pz-accordion-headline {
+            .fa:before {
+                content: '\f068';
+            }
+        }
+    }
+}
+
+.pz-accordion-headline {
+    @extend %clearfix;
+    margin: 0;
+    color: $blue;
+    cursor: pointer;
+    @extend %default-transition;
+    
+    span {
+        float: left;
+        display: block;
+        width: calc(100% - 40px);
+    }
+
+    .fa {
+        @extend %default-transition;
+        float: left;
+        width: 40px;
+        padding-left: 10px;
+        color: $orange;
+        font-size: 36px;
+        
+        &:before {
+            content: '\f067';
+        }
+    }
+    
+    &:hover {
+        color: $orange;
+    }
+}
+
+.pz-accordion-content {
+    display: none;
+    padding: 1rem 0;
+}
+
+.white-background .pz-accordions-content .pz-accordion {
+    background-color: $light-blue;
+    
+    &:hover, &.pz-active-accordion {
+        background-color: rgba($light-blue, 0.6);
+    }
+}

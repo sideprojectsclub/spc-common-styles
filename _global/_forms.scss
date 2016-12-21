@@ -28,7 +28,7 @@ button, input, select, textarea {
 }
 
 input, select, textarea {
-    @include transition(all 0.4s ease);
+    @extend %default-transition;
     @extend %default-border-radius;
     width: 100%;
     margin: 0.2rem 0 1rem 0;

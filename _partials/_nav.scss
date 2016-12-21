@@ -2,7 +2,7 @@
 /* Navigation Bar */
 /*----------------*/
 
-#nav {
+.main-nav {
     position: fixed;
     top: 0;
     bottom: auto;
@@ -10,7 +10,7 @@
     z-index: 2;
     width: 100%;
     @include box-shadow(0px 2px 2px 0px rgba(#000, 0.05));
-    @include transition(background-color 0.4s ease, box-shadow 0.4s ease);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
     
     &.home-nav {
         position: absolute;
@@ -58,13 +58,13 @@
 }
 
 @include breakpoint(601px) {
-    body.admin-bar #nav:not(.home-nav) {
+    body.admin-bar .main-nav:not(.home-nav) {
         top: 46px;
     }
 }
 
 @include breakpoint(783px) {
-    body.admin-bar #nav:not(.home-nav) {
+    body.admin-bar .main-nav:not(.home-nav) {
         top: 32px;
     }
 }
@@ -80,7 +80,7 @@
     }
     
     button {
-        @include transition(all 0.4s ease);
+        @extend %default-transition;
         position: absolute;
         top: 0;
         
@@ -130,7 +130,7 @@
 }
 
 /* Desktop menu */
-#nav-menu {
+.desktop-nav-menu {
     display: none;
     
     ul {
@@ -158,7 +158,7 @@
         display: none;
     }
     
-    #nav-menu {
+    .desktop-nav-menu {
         display: block;
     }
 }

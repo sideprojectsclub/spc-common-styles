@@ -97,7 +97,7 @@
             color: $blue;
             font-size: 2.4rem;
             font-weight: $semibold;
-            @include transition(all 0.4s ease);
+            @extend %default-transition;
         }
         
         .ai1ec-event-time {
@@ -109,7 +109,7 @@
             color: $medium-gray;
             font-size: 36px;
             line-height: 1;
-            @include transition(all 0.4s ease);
+            @extend %default-transition;
             
             &.ai1ec-fa-plus-circle:before {
                 content: '\f067';

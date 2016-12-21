@@ -20,7 +20,7 @@
     background-color: $orange;
 }
 
-.blue-background, .orange-background{
+.blue-background, .orange-background {
     &, h1, h2, h3, h4, h5, h6, p, li, th, td {
         color: #fff;
     }
@@ -36,7 +36,7 @@
 
 .blue-background {
     a {
-        color: lighten($orange, 10%);
+        color: #ffdebc; // light orange
     }
 }
 
@@ -64,7 +64,7 @@
 
 /* Miscellaneous */
 
-.puzzle-section-headline {
+.pz-section-headline {
     text-align: center;
     
     h2 {
@@ -72,26 +72,26 @@
     }
 }
 
-.one-column-section, .two-column-section {
-    .column {
+.pz-one-column-section, .pz-two-column-section {
+    .col {
         @include display-flex;
         @include align-items(center);
         
-        .column-inner {
+        .col-inner {
             @include flex(1 1 auto);
         }
     }
 }
 
-.two-column-section {
+.pz-two-column-section {
     &.align-top {
-        .column {
+        .col {
             @include align-items(flex-start);
         }
     }
     
     &.align-center {
-        .column {
+        .col {
             @include align-items(center);
         }
     }
